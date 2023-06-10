@@ -13,25 +13,28 @@ switch(attack){
 // per-attack logic
 
 switch(attack){
-	
-	// give your moves some "pop" by spawning dust during them!
-	
-	case AT_JAB:
-		was_parried = false; // easy method for single-hit jabs
-	case AT_FTILT:
-	case AT_DTILT:
-		break;
-	case AT_UTILT:
-		break;
-	case AT_FSTRONG:
-		break;
-	case AT_USTRONG:
-		break;
+    // give your moves some "pop" by spawning dust during them!
+    case AT_JAB:
+        break;
+    case AT_FTILT:
+        break;
+    case AT_DTILT:
+        break;
+    case AT_UTILT:
+        break;
+    case AT_DATTACK:
+        //gatling-cancel
+        can_ustrong = (window == 2) && (has_hit && !was_parried);
+        break;
+    case AT_FSTRONG:
+        break;
+    case AT_USTRONG:
+        break;
 	
 	
 	
 	case AT_NSPECIAL:
-	break;
+	    break;
 	
 	
 	
