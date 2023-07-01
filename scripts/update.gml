@@ -4,6 +4,7 @@
 // Sephiroth-Zenith mode "install"
 
 //TODO: detect Abyss mode & assume score-advantage of zero, fixed opponent percent
+//TODO: alone in practice mode, wat do? (possible division by zero)
 if (!zenith_was_activated) 
 && (zenith_last_known_percent < get_player_damage(player))
 {
@@ -27,6 +28,7 @@ if (!zenith_was_activated)
     var treshold = clamp(60 + (opponent_percent/5) - (score_diff*10), 80, 120) + (score_diff * 5);
     if (get_player_damage(player) > treshold)
     {
+        sound_play(zenith_activation_sound);
         print("ZENITH TRIGGER")
         zenith_active = true;
         zenith_was_activated = true;

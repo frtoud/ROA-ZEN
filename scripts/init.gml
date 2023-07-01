@@ -158,3 +158,5 @@ zenith_was_activated = false; //prevents re-activating twice within a single lif
 zenith_points = 0; //counts down to de-activation
 zenith_pointloss_mult = 0.3; //Points lost per damage dealt
 
+zenith_activation_sound = asset_get("sfx_burnconsume")
+zenith_particle = hit_fx_create(sprite_get("smoke_vfx"), 12);
