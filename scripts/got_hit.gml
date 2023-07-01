@@ -1,1 +1,1 @@
-//hit_player.gml
+//got_hit.gml

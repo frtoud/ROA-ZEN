@@ -148,3 +148,13 @@ air_dodge_sound     = asset_get("sfx_quick_dodge");
 // Visual offsets for when you're in Ranno's bubble
 bubble_x = 0;
 bubble_y = 8;
+
+
+//====================================================
+// Sephiroth-Zenith mode "install"
+zenith_last_known_percent = get_player_damage(player);
+zenith_active = false;
+zenith_was_activated = false; //prevents re-activating twice within a single life
+zenith_points = 0; //counts down to de-activation
+zenith_pointloss_mult = 0.3; //Points lost per damage dealt
+
